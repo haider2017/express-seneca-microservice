@@ -1,6 +1,6 @@
 FROM node:10.0-alpine
 WORKDIR /app
 EXPOSE 8080
-RUN npm install
 ADD . /app
+RUN npm install
 CMD ["npm", "start"]
