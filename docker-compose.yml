@@ -1,14 +1,14 @@
 version: '3'
 services:
-  server1:
+  server:
     build: ./server
     environment:
     - webserver_port=3000
     ports:
      - "3000:8080"
     command: npm start
-  clientservice1:
+  clientservice:
     build: ./client
     depends_on:
-     - "server1"
+     - "server"
     command: npm start
